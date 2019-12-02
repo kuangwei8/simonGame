@@ -1,23 +1,42 @@
-.button {
-  background-color: grey;
-  border: none;
-  color: white;
-  padding: 15px 32px;
+body {
+    display: grid;
+    grid-template-columns: 1 1.5;
+    grid-template-rows: 1 1.5;
+    justify-content: center;
+    align-items: center;
+    grid-template-areas:
+    'header header'
+    'play play'
+    'first second'
+    'third fourth'
+    'submit submit';
+    grid-gap: 10px;
+ 
+    
+}
+h1 {
+  text-decoration-color: black;
+  font-size: 30px;
+  grid-area: header;
   text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
+  padding-bottom: 10px;
+ 
 }
-
-/* #red{
-  background-color:#ff8566;
+.button {
+    background-color: gray;
+    border: none;
+    color: white;
+    padding: 75px 150px;
+    text-align: center;
+    font-size: 25px;
+    
+ 
+    
+   
 }
-#blue{
-  background-color: #809fff;
-}
-#green{
-  background-color: #80ff80;
-}
-#yellow{
-  background-color: #ffff66;
-} */ 
+#red {grid-area: first;}
+#blue {grid-area: second;} 
+#yellow {grid-area: third;} 
+#green {grid-area: fourth;} 
+#play {grid-area: play; padding: 25px; background-color: darkorchid; }
+#submit {grid-area: submit; padding: 25px; background-color: lightsalmon;}
