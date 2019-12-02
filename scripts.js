@@ -8,43 +8,48 @@ class simonGame{
   }
 
   generateNumber(){
-    let randomNum = Math.floor((Math.random() * 1) + 1);
+    let randomNum = Math.floor((Math.random() * 4) + 1);
     this.numberList.push(randomNum); 
   }
-
-  originalColor(color){
-    document.getElementById(color).style.backgroundColor = "grey";
-  }
+    
 
   changeColor(list) {
-    for (let i = 0; i < list.length; i++) {
-      if (list[i] == 1) {
-  
-          document.getElementById("red").style.backgroundColor = "#ff3300";
-          setTimeout(this.originalColor("red"), 3000);
-       
+   
+      for (let i=0; i< list.length; i++) {
+        if (list[i] == 1) {
+          setTimeout(()=>{
+            document.getElementById("red").style.backgroundColor = "#ff3300";
+            setTimeout(() => document.getElementById("red").style.backgroundColor = "grey", 1500);
+          }, 2000)
+        }
+        if (list[i] == 2) {
+          setTimeout(()=>{
+            document.getElementById("blue").style.backgroundColor = "#0040ff";
+            setTimeout(() => document.getElementById("blue").style.backgroundColor = "grey", 1500);
+          },2000)
+        }
+        if (list[i] == 3) {
+          setTimeout(()=>{
+            document.getElementById("yellow").style.backgroundColor = "#ffff66";
+            setTimeout(() => document.getElementById("yellow").style.backgroundColor = "grey", 1500);
+          }, 2000)
+        }
+        if (list[i] == 4) {
+          setTimeout(()=>{
+            document.getElementById("green").style.backgroundColor = "#00cc00";
+            setTimeout(() => document.getElementById("green").style.backgroundColor = "grey", 1500);
+          },2000)
+        }
       }
-      if (list[i] == 2) {
-        document.getElementById("blue").style.backgroundColor = "#0040ff";
-     
-        
-      }
-      if (list[i] == 3) {
-        document.getElementById("yellow").style.backgroundColor = "#ffff66";
-
-        
-
-      }
-      if (list[i] == 4) {
-        document.getElementById("green").style.backgroundColor = "#00cc00";
-      
-        
-      }
+ 
+    
     }
-  }
 
 
-}
+   }
+
+
+
 
 // User Interface Logic
 
