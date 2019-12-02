@@ -8,36 +8,52 @@ class simonGame{
   }
 
   generateNumber(){
-    let randomNum = Math.floor((Math.random() * 3) + 1);
+    let randomNum = Math.floor((Math.random() * 1) + 1);
     this.numberList.push(randomNum); 
   }
 
-  lightUp(){
-    for(let i = 0; i<this.numberList.length; i++){
-      if(this.numberList[i]== 1){
-        console.log("red"); 
+  originalColor(color){
+    document.getElementById(color).style.backgroundColor = "grey";
+  }
+
+  changeColor(list) {
+    for (let i = 0; i < list.length; i++) {
+      if (list[i] == 1) {
+  
+          document.getElementById("red").style.backgroundColor = "#ff3300";
+          setTimeout(this.originalColor("red"), 3000);
+       
       }
-      if(this.numberList[i]==2){
-        console.log("blue"); 
+      if (list[i] == 2) {
+        document.getElementById("blue").style.backgroundColor = "#0040ff";
+     
+        
       }
-      if(this.numberList[i]==3){
-        console.log("yellow");
+      if (list[i] == 3) {
+        document.getElementById("yellow").style.backgroundColor = "#ffff66";
+
+        
+
       }
-      if(this.numberList[i]==4){
-        console.log("green"); 
+      if (list[i] == 4) {
+        document.getElementById("green").style.backgroundColor = "#00cc00";
+      
+        
       }
     }
   }
-  changeColor(color){
 
-  }
 
 }
 
-const game1 = new simonGame(); 
-
-console.log(game1.numberList); 
-game1.lightUp(); 
-
 // User Interface Logic
 
+const newGame = new simonGame(); 
+
+$('#play').click(function(){
+  newGame.generateNumber(); 
+  const colorNum = newGame.numberList; 
+  console.log(colorNum); 
+  newGame.changeColor(colorNum); 
+
+})
