@@ -42,6 +42,7 @@ class simonGame{
     }
 }
 
+// User keys
   const redKey = document.getElementById("red").addEventListener("click", displayRed);
   const blueKey = document.getElementById("blue").addEventListener("click", displayBlue);
   const yellowKey = document.getElementById("yellow").addEventListener("click", displayYellow); 
@@ -52,7 +53,6 @@ class simonGame{
     document.getElementById("red").style.backgroundColor = "#ff3300";
     setTimeout(() => document.getElementById("red").style.backgroundColor = "grey", 1000);
     userNumList.push(1);
-    console.log('1');
   }
   function displayBlue() {
     document.getElementById("blue").style.backgroundColor = "#0040ff";
@@ -81,7 +81,6 @@ const newGame = new simonGame();
 $('#play').click(function() {
   newGame.generateNumber();
   const colorNum = newGame.numberList;
-  console.log(colorNum);
   newGame.changeColor(colorNum);
   setTimeout(() => {
     alert("now is your turn to play");
@@ -90,12 +89,29 @@ $('#play').click(function() {
 })
 
 $('#submit').click(function () {
-  console.log(userNumList);
+  let result = true; 
+  if(newGame.numberList.length != userNumList.length){
+    result = false
+  }
+  for(let i = 0; i<newGame.numberList.length; i++){
+    if(newGame.numberList[i] !== userNumList[i] ){
+      result = false; 
+    }
+  }
+  if(result === true){
+    alert("Click Play to continue");
+  }
+
+  if(result === false){
+    alert("Click Play to restart the game"); 
+    while(newGame.numberList.length){
+      newGame.numberList.pop(); 
+    }
+  }
+
   while(userNumList.length){
     userNumList.pop(); 
   }
-  console.log(userNumList); 
- 
 
 })
 
