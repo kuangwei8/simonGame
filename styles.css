@@ -34,9 +34,8 @@ h1 {
     
    
 }
-#red {grid-area: first;}
-#blue {grid-area: second;} 
-#yellow {grid-area: third;} 
-#green {grid-area: fourth;} 
-#play {grid-area: play; padding: 25px; background-color: darkorchid; }
-#submit {grid-area: submit; padding: 25px; background-color: lightsalmon;}
+#red {grid-area: first; background-color: red;}
+#blue {grid-area: second; background-color: blue;} 
+#yellow {grid-area: third; background-color: yellow;} 
+#green {grid-area: fourth; background-color: green;} 
+#play {grid-area: play; padding: 25px; background-color: orchid; }
