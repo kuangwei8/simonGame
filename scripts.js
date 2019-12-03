@@ -26,6 +26,28 @@ class simonGame{
   }
 }
 
+//=========================== {USER TURN} ===================================//
+class user{
+  constructor(){
+    this.numberOfGuesses = -1;
+  }
+  checkResult(currentColor) { //compare clicked color to computer color
+    let currentIdx = this.numberOfGuesses;
+    let color = newGame.colorSequence[currentIdx];
+    let lastIdx = newGame.colorSequence.length - 1;
+    if (currentColor !== color) {
+      endGame();
+      location.reload(); 
+    }
+    if(currentIdx === lastIdx){
+      this.numberOfGuesses = -1; 
+      setTimeout(()=> newGame.computerTurn(), lastIdx * 500); 
+    }
+  }
+}
+
+
+//=========================== {OTHER FUCNTIONS - Sounds & Display} ===================================//
 function sound(src) {
   this.sound = document.createElement("audio");
   this.sound.src = src;
@@ -55,26 +77,6 @@ const sounds = {
   blue: new sound('./Music/blue.wav'),
   yellow: new sound('./Music/yellow.wav'),
   green: new sound('./Music/green.wav')
-}
-
-//=========================== {USER TURN} ===================================//
-class user{
-  constructor(){
-    this.numberOfGuesses = -1;
-  }
-  checkResult(currentColor) { //compare clicked color to computer color
-    let currentIdx = this.numberOfGuesses;
-    let color = newGame.colorSequence[currentIdx];
-    let lastIdx = newGame.colorSequence.length - 1;
-    if (currentColor !== color) {
-      endGame();
-      location.reload(); 
-    }
-    if(currentIdx === lastIdx){
-      this.numberOfGuesses = -1; 
-      setTimeout(()=> newGame.computerTurn(), lastIdx * 500); 
-    }
-  }
 }
 
 //=========================== {EVENT LISTENERS} ===================================//
