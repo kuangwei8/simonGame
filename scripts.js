@@ -71,7 +71,6 @@ function displayColor(color){
   }, 100);
   sounds[color].play();
 }
-
 const sounds = {
   red: new sound('./Music/red.wav'),
   blue: new sound('./Music/blue.wav'),

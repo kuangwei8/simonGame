@@ -1,41 +1,70 @@
-body {
-    display: grid;
-    grid-template-columns: 1 1.5;
-    grid-template-rows: 1 1.5;
-    justify-content: center;
-    align-items: center;
-    grid-template-areas:
-    'header header'
-    'play play'
-    'first second'
-    'third fourth'
-    'submit submit';
-    grid-gap: 10px;
- 
-    
-}
-h1 {
-  text-decoration-color: black;
-  font-size: 30px;
-  grid-area: header;
-  text-align: center;
-  padding-bottom: 10px;
- 
+.circle {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 150px;  
+  width: 750px;
+  height: 750px;
+  
 }
 .button {
-    background-color: gray;
-    border: none;
-    color: white;
-    padding: 75px 150px;
-    text-align: center;
-    font-size: 25px;
-    
- 
-    
-   
+  background-color: gray;
+  border: none;
+  color: white;
+  text-align: center;
+  margin: auto;
+  font-size: 25px;
+  padding: 75px 150px;
 }
-#red {grid-area: first; background-color: red;}
-#blue {grid-area: second; background-color: blue;} 
-#yellow {grid-area: third; background-color: yellow;} 
-#green {grid-area: fourth; background-color: green;} 
-#play {grid-area: play; padding: 25px; background-color: orchid; }
+#red {
+  
+  height: 250px; 
+  border-radius:320px 20px 20px 0;
+  position: absolute;
+  top: 50px;
+  left: 150px;
+  padding-right: 147px;
+}
+#blue {
+ 
+  height: 250px; 
+  border-radius:20px 320px 0 20px;
+  position: absolute;
+  top: 50px;
+  right: 500px;
+  padding-left: 147px;}  
+#yellow {
+  
+  height: 250px; 
+  border-radius: 0 20px 20px 320px;
+  position: absolute;
+  bottom: 50px;
+  left: 150px;
+  padding-right: 125px;} 
+#green {
+  
+  height: 250px; 
+  border-radius: 20px 0 320px 20px;
+  position: absolute;
+  bottom: 50px;
+  right: 500px;
+  padding-left: 125px;} 
+#play {
+  background-color:black;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 25px;
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0;
+  
+
+  position: relative;
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+
+  bottom: 50px;
+  left: 125px;
+  
+  
+  }
