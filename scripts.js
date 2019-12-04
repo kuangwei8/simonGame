@@ -58,16 +58,19 @@ class simonGame{
     document.getElementById("blue").style.backgroundColor = "#0040ff";
     setTimeout(() => document.getElementById("blue").style.backgroundColor = "grey", 1000);
     userNumList.push(2); 
+    
   }
   function displayYellow() {
     document.getElementById("yellow").style.backgroundColor = "#ffff66";
     setTimeout(() => document.getElementById("yellow").style.backgroundColor = "grey", 1000);
-    userNumList.push(3)
+    userNumList.push(3);
+    
   }
   function displayGreen() {
     document.getElementById("green").style.backgroundColor = "#00cc00";
     setTimeout(() => document.getElementById("green").style.backgroundColor = "grey", 1000);
     userNumList.push(4);
+    
   }
 
 // User Interface Logic
@@ -115,8 +118,7 @@ $('#submit').click(function () {
 
 })
 
- 
-  
+
 
 
 
