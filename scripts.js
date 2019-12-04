@@ -36,6 +36,7 @@ class user{
     let color = newGame.colorSequence[currentIdx];
     let lastIdx = newGame.colorSequence.length - 1;
     if (currentColor !== color) {
+ 
       endGame();
       location.reload(); 
     }
@@ -72,10 +73,11 @@ function displayColor(color){
   sounds[color].play();
 }
 const sounds = {
-  red: new sound('./Music/red.wav'),
-  blue: new sound('./Music/blue.wav'),
-  yellow: new sound('./Music/yellow.wav'),
-  green: new sound('./Music/green.wav')
+  red: new sound('./Music/red.mp3'),
+  blue: new sound('./Music/blue.mp3'),
+  yellow: new sound('./Music/yellow.mp3'),
+  green: new sound('./Music/green.mp3'),
+  gameOver: new sound('./Music/gameover.mp3')
 }
 
 //=========================== {EVENT LISTENERS} ===================================//

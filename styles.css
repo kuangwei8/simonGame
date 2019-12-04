@@ -1,70 +1,39 @@
-.circle {
+body {
   display: grid;
-  justify-content: center;
+  grid-template-columns: 1.fr 1.fr;
+  grid-template-rows: 0.25fr 0.5fr 1.2fr 1.2fr;
+  grid-template-areas: "h1 h1" "play play" "first second" "third fourth";
   align-items: center;
-  grid-gap: 150px;  
-  width: 750px;
-  height: 750px;
+  justify-content: center;
+  grid-gap: 10px;
+
   
+}
+
+h1 {
+  grid-area: h1;
+  color:black;
+  font-size: 35px;
+  text-align: center;
+  padding-bottom: 0;
+  font-family: 'Press Start 2P', cursive;
 }
 .button {
   background-color: gray;
   border: none;
   color: white;
-  text-align: center;
-  margin: auto;
-  font-size: 25px;
   padding: 75px 150px;
-}
-#red {
-  
-  height: 250px; 
-  border-radius:320px 20px 20px 0;
-  position: absolute;
-  top: 50px;
-  left: 150px;
-  padding-right: 147px;
-}
-#blue {
- 
-  height: 250px; 
-  border-radius:20px 320px 0 20px;
-  position: absolute;
-  top: 50px;
-  right: 500px;
-  padding-left: 147px;}  
-#yellow {
-  
-  height: 250px; 
-  border-radius: 0 20px 20px 320px;
-  position: absolute;
-  bottom: 50px;
-  left: 150px;
-  padding-right: 125px;} 
-#green {
-  
-  height: 250px; 
-  border-radius: 20px 0 320px 20px;
-  position: absolute;
-  bottom: 50px;
-  right: 500px;
-  padding-left: 125px;} 
-#play {
-  background-color:black;
-  font-family: 'Press Start 2P', cursive;
+  text-align: center;
   font-size: 25px;
-  display: table-cell;
-  vertical-align: middle;
-  padding: 0;
-  
+}
+#red {grid-area: first; }
+#blue {grid-area: second; } 
+#yellow {grid-area: third;}  
+#green {grid-area: fourth;} 
+#play {
+  grid-area: play; 
+  padding: 25px;
+  background-color: gray;
+  background: linear-gradient(90deg, red 0%, blue 50%, yellow 75%,green 100%);
+  font-family: 'Press Start 2P', cursive}
 
-  position: relative;
-  border-radius: 50%;
-  width: 250px;
-  height: 250px;
-
-  bottom: 50px;
-  left: 125px;
-  
-  
-  }
